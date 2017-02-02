@@ -10,17 +10,21 @@
     function indexCtrl($scope){
         $scope.inputVal = "";
         $scope.reaction = "";
+        $scope.show_warning = false;
         $scope.getReaction = getReaction;
         $scope.ignoreSpacesAndRecount = ignoreSpacesAndRecount;
 
         function getReaction(){
+            $scope.show_warning = false;
             if($scope.inputVal.length > 0){
                 // considers white spaces
                 var reactionArr = $scope.inputVal.split(',');
                 if(reactionArr.length > 3){
                     $scope.reaction = "Too Much!";
                     var count = $scope.ignoreSpacesAndRecount($scope.inputVal, ',');
-                    if(count < 4){
+                    if(count === 0){
+                        $scope.reaction = "";
+                    }else if(count < 4){
                         $scope.reaction = "Enjoy!";
                     }
                 }else{
@@ -28,6 +32,7 @@
                 }
             }else{
                 $scope.reaction = "";
+                $scope.show_warning = true;
             }
         }
 
