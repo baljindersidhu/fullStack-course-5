@@ -1,0 +1,44 @@
+nav.navbar.navbar-default {
+    border-radius: 0;
+}
+.header-logo{
+  color: #004d40 !important;
+}
+
+.navbar-brand h1 {
+  font-size: 1.5em;
+  margin-top: 0;
+  line-height: .75;
+}
+
+body{
+  font-family: monospace serif;
+  background-color: #004d40;
+  color: #fff;
+}
+
+#to_buy_list{
+  padding: 0px !important;
+}
+
+#bought_list{
+  padding-right: 0px !important;
+}
+
+.list-group-item>.badge{
+  float: none;
+}
+
+.list-header{
+  color: #004d40;
+}
+
+.list-parent{
+  min-height: 50px;
+}
+
+@media (max-width: 767px){
+  #bought_list{
+    padding: 0px !important;
+  }
+}

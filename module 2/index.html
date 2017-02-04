@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Testing Ground</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="../angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/custom.css">
+</head>
+
+<body ng-app="testApp">
+  <!-- Defining header -->
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+					<a class="navbar-brand header-logo" href="index.html"><span class="glyphicon glyphicon-tasks"></span></a>
+          <a class="navbar-brand header-logo" href="index.html">
+            <h1>Shopping List</h1>
+          </a>
+        </div>
+      </div>  <!-- header container div ends -->
+    </nav>
+  </header>
+  <!-- Defining Section -->
+  <section class="container">
+    <div class="progress" ng-controller="progressController as progressCtrl">
+      <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+      aria-valuenow="progressCtrl.progressControls.progress" aria-valuemin="0" aria-valuemax="100" style="width:{{progressCtrl.progressControls.progress}}%">
+        {{progressCtrl.progressControls.progress}}%
+      </div>
+    </div>
+    <div ng-controller="pendingItemsController as toBuy" id="to_buy_list" class="col-md-6 col-sm-6 col-xs-12 list-parent">
+      <ul class="list-group">
+        <li class="list-group-item list-header"><span class="glyphicon glyphicon-list"></span> Things to Buy</li>
+        <li class="list-group-item list-group-item-warning" ng-repeat="item in toBuy.items">
+          <button type="button" ng-click="toBuy.buyItem($index)" class="btn btn-primary">Bought <span class="badge">{{item.count}} </span></button> of {{item.name}}
+        </li>
+        <li ng-if="toBuy.items.length === 0" class="list-group-item list-group-item-success">Everything is Bought!</li>
+      </ul>
+    </div>
+    <div ng-controller="boughtItemsController as bought" id="bought_list" class="col-md-6 col-sm-6 col-xs-12 list-parent">
+      <ul class="list-group">
+        <li class="list-group-item list-header"><span class="glyphicon glyphicon-list"></span> Already Bought</li>
+        <li class="list-group-item list-group-item-warning" ng-repeat="item in bought.items">
+          <button type="button" ng-click="bought.removeItem($index)" class="btn btn-primary">Undo <span class="badge">{{item.count}}</span></button> of {{item.name}}
+        </li>
+        <li ng-if="bought.items.length === 0" class="list-group-item list-group-item-danger">Nothing Bought Yet!</li>
+      </ul>
+    </div>
+  </section>
+  <!-- Defining Footer -->
+  <footer></footer>
+
+</body>
+
+</html>
