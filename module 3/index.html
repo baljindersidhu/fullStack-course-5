@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/index.controller.js"></script>
+    <script src="scripts/directives/scripts/list.items.js"></script>
+  </head>
+  <body ng-app="NarrowItDownApp">
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+              David Chu's Restaurant
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+     <div class="container" ng-controller="NarrowItDownController as filterController">
+
+       <div class="jumbotron">
+         <h1 class="text-center">Mouth Watery Treats</h1>
+         <p class="text-center">Narrow Down Your Chinese Menu Choice</p>
+      </div> <!-- jumbotron div ends here -->
+      <ng-include src="loader/itemsloaderindicator.template.html"></ng-include>
+      <form class="search-bar">
+        <div class="input-group">
+          <input type="text" class="form-control" ng-model="filterController.search_value" placeholder="Search">
+          <div class="input-group-btn">
+            <button class="btn btn-success" ng-click="filterController.search()">
+              Narrow It Down For Me!
+            </button>
+          </div> <!-- search button div ends here -->
+        </div> <!-- input-group ends here -->
+      </form>  <!-- form ends here -->
+
+      <!-- found-items should be implemented as a component -->
+      <found-items found-items="filterController.items" on-remove="filterController.removeItem(index)"></found-items>
+      <div class="text-center">
+        <img ng-show="filterController.showLoader" class="loading-icon" src="fonts/ring.svg" alt="Loading...">
+      </div>
+      <div ng-if="filterController.showError" class="panel panel-danger">
+        <div class="panel-heading">Showing 0 search results</div>
+        <div class="panel-body error-message">No results found.</div>
+      </div>
+    </div>
+
+  </body>
+</html>

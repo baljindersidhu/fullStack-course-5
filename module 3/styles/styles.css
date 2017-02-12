@@ -1,0 +1,85 @@
+body{
+  background-color: #F44336;
+  color: #fff;
+}
+
+nav.navbar.navbar-default {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-brand{
+  color : #0275d8;
+}
+
+.navbar-default .navbar-brand:hover{
+  color : #23527c;
+}
+
+/*h1 {
+  margin-bottom: 30px;
+}*/
+input[type="text"] {
+  width: 200px;
+  float: left;
+}
+
+.loading-icon{
+  height: 40px;
+  width: 40px;
+}
+
+.jumbotron{
+  background-color: inherit;
+}
+
+.search-bar{
+  margin-bottom: 40px;
+}
+.search-bar input:hover, .search-bar input:focus{
+  color: #0275d8;
+}
+/*item container*/
+/*.list-item-parent{
+  background-color: #fff;
+  color : #F44336;
+  min-height: 160px;
+  margin-bottom: 35px;
+}
+
+.remove-button{
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.remove-button:hover{
+  color: #0275d8;
+}
+
+.item-heading h3{
+  margin-top: 0px;
+}*/
+/*
+.item-content {
+    padding-top: 10px;
+    padding-left: 12px;
+}
+
+.item-description{
+  overflow: hidden;
+}*/
+
+.list-group a, .list-group a:hover, .list-group a:focus, a.list-group-item .list-group-item-heading{
+  color : #F44336;
+}
+
+.item-placeholder{
+  margin-right : 10px;
+}
+.list-group-item p, h4.list-group-item-heading.item-heading.ng-binding{
+  margin-left : 25px;
+}
+
+.error-message{
+  color: #a94442;
+}
