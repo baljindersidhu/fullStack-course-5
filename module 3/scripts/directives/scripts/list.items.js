@@ -11,7 +11,7 @@
         items : '<foundItems',
         removeItem : '&onRemove'
       },
-      templateUrl : 'found.items.html'
+      templateUrl : 'scripts/directives/templates/found.items.html'
     };
   }
 })();
