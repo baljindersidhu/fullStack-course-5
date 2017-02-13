@@ -41,6 +41,20 @@
         </div> <!-- input-group ends here -->
       </form>  <!-- form ends here -->
 
+      <!-- suggestions panel -->
+      <div class="panel panel-info">
+        <div class="panel-heading">Suggestions</div>
+        <div class="panel-body text">
+          <span ng-repeat="suggestion in filterController.searchSuggestions">
+            <span class="badge suggestion-pill cursor-pointer" ng-click="filterController.searchSuggestion($index)">
+              <span class="glyphicon glyphicon-tags"></span>
+              {{suggestion}}
+            </span>
+          </span>
+          <span class="glyphicon glyphicon-remove-sign pull-right" ng-click=""></span>
+        </div>
+      </div>
+
       <!-- found-items should be implemented as a component -->
       <found-items found-items="filterController.items" on-remove="filterController.removeItem(index)"></found-items>
       <div class="text-center">
@@ -48,7 +62,7 @@
       </div>
       <div ng-if="filterController.showError" class="panel panel-danger">
         <div class="panel-heading">Showing 0 search results</div>
-        <div class="panel-body error-message">No results found.</div>
+        <div class="panel-body error-message">{{filterController.errorMessage}}</div>
       </div>
     </div>
 

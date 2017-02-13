@@ -38,6 +38,14 @@ input[type="text"] {
 .search-bar input:hover, .search-bar input:focus{
   color: #0275d8;
 }
+
+.suggestion-pill, .suggestion-pill span{
+  margin-right: 5px;
+}
+
+.cursor-pointer{
+  cursor:pointer
+}
 /*item container*/
 /*.list-item-parent{
   background-color: #fff;
