@@ -1,0 +1,34 @@
+/*Global styles*/
+body{
+    font-family: 'Marck Script', cursive;
+    background-image: url('/images/backgrounds/fruits_background.jpeg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+/*Global styles ends*/
+
+/*header styles*/
+header{
+  background-color: #fff;
+  opacity: 0.6;
+}
+
+.navbar-header a{
+  font-family: 'Pacifico', cursive;
+  color: #b71c1c;
+}
+/*header styles ends*/
+
+/*footer styles*/
+footer{
+  margin-top: 406px;
+  background: #000;
+  opacity: 0.4;
+}
+
+footer p{
+  margin-bottom: 0;
+  padding-bottom: 21px;
+  padding-top: 22px;
+  color: #fff;
+}

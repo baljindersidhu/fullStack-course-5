@@ -1,0 +1,4 @@
+<ul class="col-md-6">
+  <li ng-repeat="category in vm.items" ui-sref="home.categories.items({itemName : category.short_name})">{{category.name}}</li>
+</ul>
+<ui-view class="col-md-6"></ui-view>

@@ -1,0 +1,56 @@
+/*welcome pod styles*/
+.welcome-pod{
+  margin-top: 150px;
+}
+
+.welcome-pod h1{
+  font-size: 3.5rem;
+}
+.welcome-pod hr{
+  border: 1px solid #b71c1c;
+  max-width: 15%;
+}
+.quote, .author{
+  font-family: 'Dancing Script', cursive;
+}
+.quote{
+  font-size: 1.8em;
+}
+.author{
+  margin-bottom: 50px;
+}
+.welcome-pod button{
+  font-family: 'Dancing Script', cursive;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 50px;
+}
+.welcome-pod button:hover{
+  background-color: #fff;
+  color: #b71c1c;
+}
+
+
+@media (max-width : 640px) and (orientation:portrait){
+  .welcome-pod{
+    margin-top: 220px;
+  }
+}
+
+@media (max-width : 640px) and (orientation:landscape){
+  .welcome-pod{
+    /*margin-top: 440px;*/
+  }
+}
+
+@media (max-width : 768px) and (orientation:portrait){
+  .welcome-pod{
+    margin-top: 260px;
+  }
+}
+
+@media (max-width : 768px) and (orientation:landscape){
+  .welcome-pod{
+    margin-top: 360px;
+  }
+}

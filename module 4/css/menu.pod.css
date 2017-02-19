@@ -1,0 +1,10 @@
+.menu-pod{
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fff;
+}
+.menu-pod hr{
+  border: 1px solid #b71c1c;
+  max-width: 5%;
+}
