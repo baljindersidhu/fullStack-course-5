@@ -1,7 +1,7 @@
 /*Global styles*/
 body{
     font-family: 'Marck Script', cursive;
-    background-image: url('images/backgrounds/fruits_background.jpeg');
+    background-image: url('../images/backgrounds/fruits_background.jpeg');
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
