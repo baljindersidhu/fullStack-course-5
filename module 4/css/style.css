@@ -15,7 +15,7 @@ header{
 
 .navbar-header a{
   font-family: 'Pacifico', cursive;
-  color: #b71c1c;
+  color: #b71c1c !important;
 }
 /*header styles ends*/
 
