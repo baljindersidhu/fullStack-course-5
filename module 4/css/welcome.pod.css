@@ -24,6 +24,7 @@
   cursor: pointer;
   font-weight: bold;
   border-radius: 50px;
+  outline: none !important;
 }
 .welcome-pod button:hover{
   background-color: #fff;
