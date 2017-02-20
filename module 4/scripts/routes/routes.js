@@ -14,7 +14,7 @@
       templateUrl : 'templates/home.template.html'
     }) // home state definition ends here
     .state('home.categories', {
-      url : '/categories',
+      url : 'categories',
       templateUrl : 'templates/categories.template.html',
       controller : 'CategoriesController as vm',
       resolve : {
