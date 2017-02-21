@@ -1,4 +1,28 @@
-<ul class="col-md-6">
-  <li ng-repeat="category in vm.items" ui-sref="home.categories.items({itemName : category.short_name})">{{category.name}}</li>
-</ul>
-<ui-view class="col-md-6"></ui-view>
+<!-- menu pod welcome text -->
+<div class="text-center menu-pod">
+  <h1>Menu</h1>
+  <hr>
+</div>
+{{vm.navigationProperties.viewSwitched}}
+<!-- categories table -->
+<div class="table-responsive category-parent" ng-hide="vm.viewSwitched()">
+  <table class="table table-hover">
+    <!-- categories table header -->
+    <thead>
+      <tr>
+        <th class="text-center"> <!-- <span class="glyphicon glyphicon-tags"></span> --> #</th>
+        <th>Category Name</th>
+      </tr>
+    </thead> <!-- categories table header ends -->
+    <tbody>
+      <tr ng-repeat="category in vm.items" ng-click="vm.navigate()" ui-sref="items({itemName : category.short_name})">
+        <td class="text-center">{{$index}}</td>
+        <!-- <td class="text-center"><span class="glyphicon glyphicon-tag"></span></td> -->
+        <td><span class="glyphicon glyphicon-plus-sign"></span> {{category.name}}</td>
+      </tr>
+      <tr>
+      </tr>
+    </tbody> <!-- categories table body ends here -->
+  </table>
+</div>
+<ui-view></ui-view>

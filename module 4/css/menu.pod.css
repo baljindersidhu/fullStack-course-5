@@ -1,10 +1,41 @@
+/*menu pod styles*/
 .menu-pod{
-  margin-top: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #fff;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.menu-pod h1{
+  font-size: 5.5rem;
+  font-family: 'Marck Script', cursive;
 }
 .menu-pod hr{
   border: 1px solid #b71c1c;
   max-width: 5%;
+}
+
+.category-parent{
+  padding-left: 35%;
+  padding-right: 35%;
+}
+
+.category-parent .table{
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.category-parent thead span{
+  color : #337ab7;
+}
+
+.category-parent tr{
+  cursor: pointer;
+}
+
+.category-parent tbody span{
+  color : #337ab7;
+}
+
+.item_name{
+  margin-left: 5px;
+  color: initial !important;
 }

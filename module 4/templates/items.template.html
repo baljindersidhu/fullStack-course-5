@@ -1,4 +1,38 @@
-{{vm.category.name}}
-<ul>
-  <li ng-repeat="item in vm.items">{{item.name}}</li>
-</ul>
+<!-- menu pod welcome text -->
+<div class="text-center menu-pod">
+  <h1>Menu</h1>
+  <hr>
+</div>
+
+<!-- <div class="cssload-container" ng-if="vm.items.length < 1">
+  <div class="cssload-whirlpool"></div>
+</div> -->
+<div class="table-responsive category-parent">
+  <table class="table table-hover">
+    <!-- category items table header -->
+    <thead>
+      <tr ui-sref="categories">
+        <th class="text-center"><span class="glyphicon glyphicon-chevron-left"></span></th>
+        <th>{{vm.category.name}}</th>
+        <th>Price(Large)</th>
+      </tr>
+    </thead> <!-- categories items header ends -->
+    <tbody>
+      <tr ng-repeat="item in vm.items" title={{item.description}}>
+        <td class="text-center"></td>
+        <!-- <td class="text-center"><span class="glyphicon glyphicon-tag"></span></td> -->
+        <td>
+          <span class="	glyphicon glyphicon-th-list"></span>
+          <span class="item_name">{{item.name}}</span>
+        </td>
+        <td>
+          <span class="glyphicon glyphicon-usd"></span>
+          {{item.price_large}}
+          <span class="pull-right glyphicon glyphicon-gift"></span>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+    </tbody> <!-- categories table body ends here -->
+  </table>
+</div>
