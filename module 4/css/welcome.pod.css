@@ -14,10 +14,11 @@
   font-family: 'Dancing Script', cursive;
 }
 .quote{
-  font-size: 1.8em;
+  font-size: 2em;
 }
 .author{
   margin-bottom: 50px;
+  font-weight: 600;
 }
 .welcome-pod button{
   font-family: 'Dancing Script', cursive;
