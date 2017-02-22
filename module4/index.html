@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu App</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+  </head>
+  <body ng-app="MenuApp">
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Restraunt Menu</a>
+          </div>
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+    <section>
+      <ui-view></ui-view>
+    </section>
+    <script type="text/javascript" src="scripts/vendor/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/angular-ui-router.js"></script>
+    <script type="text/javascript" src="scripts/modules/menuapp.module.js"></script>
+    <script type="text/javascript" src="scripts/modules/data.module.js"></script>
+    <script type="text/javascript" src="scripts/routes/routes.js"></script>
+    <script type="text/javascript" src="scripts/services/menudata.service.js"></script>
+    <script type="text/javascript" src="scripts/components/categories.component.js"></script>
+    <script type="text/javascript" src="scripts/components/items.component.js"></script>
+    <script type="text/javascript" src="scripts/controllers/menu.categories.controller.js"></script>
+    <script type="text/javascript" src="scripts/controllers/menu.items.controller.js"></script>
+    <!-- <script type="text/javascript" src=""></script> -->
+    <footer>
+    </footer>
+  </body>
+</html>
