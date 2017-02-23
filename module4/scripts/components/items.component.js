@@ -3,9 +3,9 @@
   angular.module('MenuApp')
   .component('items', {
     bindings : {
-
+      items: '<menuItems',
+      category: '<category'
     },
-    templateUrl : 'menu.items.template.html',
-    controller : 'ItemsController as vm'
+    templateUrl : 'templates/menu.items.template.html'
   });
 })();

@@ -1,0 +1,21 @@
+<div class="items">
+  <h3>{{$ctrl.category.name}}</h3>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price(small)</th>
+        <th>Price(large)</th>
+        <th>Short Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr title="{{item.description}}" ng-repeat="item in $ctrl.items">
+        <td>{{item.name}}</td>
+        <td>{{item.price_small}}</td>
+        <td>{{item.price_large}}</td>
+        <td>{{item.short_name}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

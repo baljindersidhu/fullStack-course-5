@@ -17,7 +17,7 @@
       };
 
       return $http(params).then(function (result) {
-        return result.categories;
+        return result.data;
       }, function (error) {
         console.error(error);
       });
@@ -26,11 +26,11 @@
     function getItemsForCategory(categoryShortName) {
       var params = {
         method : 'GET',
-        url : MenuItemsURL
+        url : MenuItemsURL + categoryShortName
       };
 
       return $http(params).then(function (result) {
-        return result.menu_items;
+        return result.data;
       }, function (error) {
         console.error(error);
       });

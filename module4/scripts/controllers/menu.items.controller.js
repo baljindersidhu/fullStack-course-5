@@ -3,9 +3,10 @@
   angular.module('MenuApp')
   .controller('ItemsController', ItemsController);
 
-  ItemsController.$inject = ['items'];
-  function ItemsController(items) {
+  ItemsController.$inject = ['itemsData'];
+  function ItemsController(itemsData) {
     var vm = this;
-    vm.menu_items = items;
+    vm.menu_items = itemsData.menu_items;
+    vm.category = itemsData.category;
   }
 })();

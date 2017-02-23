@@ -3,9 +3,9 @@
   angular.module('MenuApp')
   .controller('CategoriesController', CategoriesController);
 
-  CategoriesController.$inject = ['categories'];
-  function CategoriesController(categories) {
+  CategoriesController.$inject = ['categoriesData'];
+  function CategoriesController(categoriesData) {
     var vm = this;
-    vm.items = angular.copy(categories);
+    vm.items = angular.copy(categoriesData);
   }
 })();
